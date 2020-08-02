@@ -1,5 +1,7 @@
 "use strict";
-
+//this was pulled from https://www.youtube.com/watch?v=h3ehO5QMNu4&t=99s
+//The deck construction credit all goes to the individual who made the video
+//I was wanting to see what way a deck could be made and copied from video
 console.log("Welcome to the higher tier Casino");
 
 
