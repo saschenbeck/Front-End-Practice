@@ -41,9 +41,6 @@ function hitMe() {
 
 function stand() {
     while(getHandValue(dealerhand) < 21){
-        dealerhand.push(drawRandomCard(deck));
-        console.log("Dealer Hand: " + dealerhand);
-        console.log("Dealer now has " + getHandValue(dealerhand));
         if(getHandValue(dealerhand) >= 17){
             if(getHandValue(dealerhand) > 21){
                 console.log("The Dealer BUSTED! Congrats! Want to try your luck once more?");
@@ -59,8 +56,16 @@ function stand() {
                 break;
             }
         }
+        dealerhand.push(drawRandomCard(deck));
+        console.log("Dealer Hand: " + dealerhand);
+        console.log("Dealer now has " + getHandValue(dealerhand));
+    }
+    if(getHandValue(dealerhand) > 21){
+        console.log("The Dealer BUSTED! Congrats! Want to try your luck once more?");
     }
 }
+
+
 
 startGame();
 console.log("Player Hand: " + playerHand);
