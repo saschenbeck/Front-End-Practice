@@ -35,12 +35,31 @@ function hitMe() {
     console.log("New Player Hand: " + playerHand);
     console.log("Player Hand Value: " + getHandValue(playerHand));
     if (getHandValue((playerHand)) > 21){
-        console.log("BUST! UNLUCKY!");
+        console.log("BUST! UNLUCKY! Care to try once more?");
     }
 }
 
 function stand() {
-
+    while(getHandValue(dealerhand) < 21){
+        dealerhand.push(drawRandomCard(deck));
+        console.log("Dealer Hand: " + dealerhand);
+        console.log("Dealer now has " + getHandValue(dealerhand));
+        if(getHandValue(dealerhand) >= 17){
+            if(getHandValue(dealerhand) > 21){
+                console.log("The Dealer BUSTED! Congrats! Want to try your luck once more?");
+                break;
+            }else if (getHandValue(dealerhand) > getHandValue(playerHand)){
+                console.log("Looks like the Dealer wins! Oh well...try again?");
+                break;
+            }else if(getHandValue(dealerhand) < getHandValue(playerHand)){
+                console.log("Congrats! You beat the Dealer! Care to play again?");
+                break;
+            }else if (getHandValue(dealerhand) == getHandValue(playerHand)){
+                console.log("Looks like a push. Care to try again?");
+                break;
+            }
+        }
+    }
 }
 
 startGame();
