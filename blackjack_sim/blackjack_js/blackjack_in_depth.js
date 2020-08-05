@@ -52,4 +52,4 @@ var values = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
 let deck = new Deck(suits,values);
 deck.createDeck(suits,values);
 deck.shuffle();
-console.log(deck.deal());
+deck.deal();
