@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Basic Slots</title>
 </head>
 <body>
+    <script>
 
+        var symbols = ["😀","🎲","🥇","🎰","💰"];
+
+        function slotSymbol(symbolsArray) {
+            var randomIndex = Math.floor(symbolsArray.length * Math.random());
+            return symbolsArray[randomIndex];
+        }
+
+        function spin() {
+            var machine = []
+            for(var i = 0; i <5 ; i++){
+                machine.push(slotSymbol(symbols));
+            }
+            console.log(machine);
+            if (machine[0] === machine[1] && machine[0] === machine[2] && machine[0] === machine[3] && machine[0] === machine[4]){
+                console.log("MEGA WINNER");
+            }else if ((machine[0] === machine[1] && machine[0] === machine[2] && machine[0] === machine[3]) || (machine[4] === machine[3] && machine[4] === machine[2] && machine[4] === machine[1])){
+                console.log("SUPER WINNER!");
+            }else if ((machine[0] === machine[1] && machine[0] === machine[2]) || (machine[4] === machine[3] && machine[4] === machine[2])){
+                console.log("WINNER!");
+            }else{
+                console.log("UNLUCKY! Spin again!")
+            }
+        }
+
+        spin();
+
+    </script>
 </body>
 </html>
