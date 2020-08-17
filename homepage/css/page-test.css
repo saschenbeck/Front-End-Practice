@@ -1,0 +1,89 @@
+#mainPage{
+    background-color: #8b008b;
+    height: 100%;
+    width: 100%;
+}
+#mainBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.combo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+
+
+section:nth-child(1){
+    justify-content: flex-start;
+}
+
+section:nth-child(2){
+    justify-self: center;
+    align-self: center;
+}
+section:nth-child(3){
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+#aboutMe{
+    flex-direction: column;
+    font-family: "Bangers";
+}
+#aboutMe h4{
+    color: #F24333;
+    margin: .5em 3em;
+    font-size: 200%;
+    text-shadow: 2px 2px white;
+    font-weight: bold;
+}
+#colorSection{
+    display: flex;
+    flex-direction: column;
+    color: #F24333;
+}
+#colorTitle{
+    font-size: 150%;
+    font-family: Bangers;
+    text-shadow: 2px 2px white;
+}
+#testButton{
+    font-family: Bangers;
+    align-self: center;
+}
+#chibiContainer{
+    display: flex;
+    min-width: 1%;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #F24333;
+    align-items: center;
+    align-content: center;
+    margin: 0em 0em 1em 0em;
+    border: 1px solid black;
+    border-radius: 3em;
+
+}
+#chibiImage{
+    max-height: 6em;
+    max-width: 6em;
+    background-color: #F24333;
+    margin: 0em 6em;
+}
+.socialMedia{
+    color: #8b008b;
+    margin: .5em 3em;
+    font-family: 'Bangers';
+    font-size: 200%;
+    text-shadow: 1px 1px white;
+    font-weight: bold;
+}
+a:hover{
+    color: turquoise;
+}
+a:active{
+    color: limegreen;
+}
