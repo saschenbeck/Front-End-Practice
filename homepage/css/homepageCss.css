@@ -4,6 +4,7 @@
 body {
     margin: 0;
     background-color: darkmagenta;
+    min-height: 100vh;
 }
 #topNav {
     display: flex;
@@ -11,10 +12,13 @@ body {
     align-items: center;
     font-family: "Bangers", cursive;
     justify-content: space-between;
+    max-height: 12em;
 }
 #chibiMe{
-    height: 25%;
-    width: 25%;
+    height: 10%;
+    width: 10%;
+    max-width: 10%;
+    max-height: 10%;
 }
 #topNav ul {
     display: flex;
@@ -35,7 +39,7 @@ body {
     padding: .25em;
     text-shadow: 2px 2px black;
 }
-#topNav a {
+#topNav ul>li>a {
     align-self: center;
     color: white;
     text-decoration: none;
@@ -54,3 +58,38 @@ body {
     border-radius: 30px;
     text-shadow:2px 2px black;
 }
+h2 {
+    font-family: Bangers;
+    text-shadow: 1px 1px white;
+}
+footer{
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: "Bangers", cursive;
+    display: flex;
+    justify-content: space-between;
+}
+footer ul {
+    display: flex;
+    align-items: center;
+}
+footer li {
+    display: inline-block;
+    padding: 0em 1em;
+}
+footer a {
+    color: black;
+    text-shadow: 1px 1px white;
+}
+footer a:hover {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+footer a:active{
+    color: lime;
+    text-shadow: black;
+}
+
+
