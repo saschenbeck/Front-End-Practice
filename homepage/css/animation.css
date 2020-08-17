@@ -1,0 +1,4 @@
+.colorChange{
+    transition-property: background-color;
+    transition-duration: 3s;
+}
