@@ -3,13 +3,18 @@
 }
 body {
     margin: 0;
+    background-color: darkmagenta;
 }
 #topNav {
     display: flex;
     background-color: black;
     align-items: center;
     font-family: "Bangers", cursive;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+#chibiMe{
+    height: 25%;
+    width: 25%;
 }
 #topNav ul {
     display: flex;
@@ -26,8 +31,9 @@ body {
     padding: 0em;
 }
 #topNav i {
-    color: red;
+    color: white;
     padding: .25em;
+    text-shadow: 2px 2px black;
 }
 #topNav a {
     align-self: center;
@@ -36,9 +42,15 @@ body {
     padding: 0em 1em;
 }
 
-#topNav a:hover{
+#topNav a:hover {
     background-color: white;
     color: black;
     border-radius: 30px;
     text-shadow: 2px 2px orange;
+}
+#topNav a:active{
+    background-color: limegreen;
+    color: white;
+    border-radius: 30px;
+    text-shadow:2px 2px black;
 }
