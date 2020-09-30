@@ -2,42 +2,80 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/*Load Up Animation Start*/
-.preloader {
-    position: fixed;
+/*Start of Loader*/
+.loader {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    animation: animate 2s linear infinite
+}
+.loader:before {
+    content: '';
+    position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /*background: #000;*/
-    transition: 1s;
-}
-.preloader:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: #000;
-    transition: 1.5s;
-}
-
-.preloader.complete:before {
-    left: -50%;
-}
-
-.preloader:after {
-    content: "";
-    position: absolute;
     right: 0;
-    width: 50%;
-    height: 100%;
-    background: #000;
-    transition: 1.5s;
+    bottom: 0;
+    left: 0;
+    background: black;
+    animation: animateBg 2s linear infinite
+}
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes animateBg {
+    0% {
+        height : 0;
+    }
+    25% {
+        height : 0;
+    }
+    50% {
+        height : 100%;
+    }
+    75% {
+        height : 100%;
+    }
+    100% {
+        height : 0;
+    }
+}
+/*End of Loader*/
+
+.content {
+    opacity: 0;
+    transition: 2s;
 }
 
-.preloader.complete:after {
-    right: -50%;
+.blue {
+    background-color: deepskyblue;
+    transition-property: background-color;
+    transition-duration: 3s;
 }
-/*Load Up Animation End*/
+
+.col-2 {
+    transition-property: background-color;
+    transition-duration: 2s;
+    opacity: 0;
+}
+#chibiImage {
+    height: 3em;
+}
